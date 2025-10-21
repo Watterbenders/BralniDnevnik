@@ -1,0 +1,2 @@
+docker build -t onlymushy/BralniDnevnik:latest 
+docker run -p 8080:80 --name rgis-container -d onlymushy/BralniDnevnik:latest
