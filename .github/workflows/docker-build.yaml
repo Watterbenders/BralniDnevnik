@@ -29,6 +29,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: | 
-            Watterbenders/BralniDnevnik:latest
-            Watterbenders/BralniDnevnik:${{ github.sha }}
+            onlymushy/bralnidnevnik:latest
+            onlymushy/bralnidnevnik:${{ github.sha }}
 
