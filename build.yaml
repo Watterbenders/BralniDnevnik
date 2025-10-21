@@ -26,6 +26,9 @@ jobs:
       - name: Gradi in porini sliko pristana
         uses: docker/build-push-action@v6
         with: 
-          context: .
+          context: ./BralniDnevnik
           push: true
-          tags: Watterbender/BralniDnevnik:latest
+          tags: | 
+            Watterbenders/BralniDnevnik:latest
+            Watterbenders/BralniDnevnik:${{ github.sha }}
+
