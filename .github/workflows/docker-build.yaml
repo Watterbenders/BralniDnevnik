@@ -35,7 +35,7 @@ jobs:
       - name: Splavi v azure kontejner instance
         uses: azure/webapps-deploy@v2
         with:
-          app-name: bralnidnevnik_group-b030
+          app-name: bralnidnevnik
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           images: onlymushy/bralnidnevnik:latest
 
