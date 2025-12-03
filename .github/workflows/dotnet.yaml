@@ -42,15 +42,6 @@ jobs:
         name: test-results
         path: "**/test-results.trx"
 
-    # 8) Lep test report (samo če NI PR iz forka – drugače GitHub ne pusti)
-    - name: Test Report
-      if: github.event.pull_request.head.repo.fork == false
-      uses: dorny/test-reporter@v1
-      with:
-        name: MSTest Report
-        path: "**/test-results.trx"
-        reporter: dotnet-trx
-
     # 9) Docker build
     # Če imaš Dockerfile v rootu, pusti tako.
     # Če je Dockerfile v mapi RGIS_PrijavaVSistem, spremeni v:
