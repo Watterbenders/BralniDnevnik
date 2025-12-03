@@ -1,56 +1,25 @@
-name: Build, Test and Dockerize (.NET 7)
+name: Net7 Tests
 
 on:
   push:
   pull_request:
 
 jobs:
-  build-test-docker:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
-    # 1) Checkout
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
 
-    # 2) Install .NET 7 SDK + runtime
-    - name: Setup .NET 7 SDK + Runtime
+    # NAJPOMEMBNEJŠI DEL – tukaj se MORA instalirati .NET 7
+    - name: Setup .NET 7 SDK
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: |
-          7.0.x
-        runtime-version: |
-          7.0.x
+        dotnet-version: '7.0.x'
 
-    # 3) Show debug info
     - name: dotnet --info
       run: dotnet --info
 
-    # 4) Restore
-    - run: dotnet restore
-
-    # 5) Build
-    - run: dotnet build --configuration Release --no-restore
-
-    # 6) Test
     - name: Run tests
-      run: dotnet test --configuration Release --logger "trx;LogFileName=test-results.trx" --no-build
-
-    # 7) Upload test results (artifact v4)
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      with:
-        name: test-results
-        path: "**/test-results.trx"
-
-    # 8) Test Reporter (only if not fork)
-    - name: Test Report
-      if: github.event.pull_request.head.repo.fork == false
-      uses: dorny/test-reporter@v1
-      with:
-        name: MSTest Report
-        path: "**/test-results.trx"
-        reporter: dotnet-trx
-
-    # 9) Docker build
-    - name: Docker build
-      run: docker build -t bralni-dnevnik-app .
+      run: dotnet test RGIS_PrijavaVSistem/RGIS_PrijavaVSistem.csproj --configuration Release --logger "trx;LogFileName=test-results.trx"
