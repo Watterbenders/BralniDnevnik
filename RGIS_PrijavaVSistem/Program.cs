@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-
+//komentar
 // registracija naših domenkih servisov
 builder.Services.AddSingleton<InMemoryDataStore>();
 builder.Services.AddScoped<IBookService, BookService>();
