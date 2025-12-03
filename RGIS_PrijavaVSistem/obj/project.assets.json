@@ -1686,23 +1686,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maksf\\.nuget\\packages\\": {},
+    "C:\\Users\\krist\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Sola\\BralniDnevnik\\RGIS_PrijavaVSistem\\RGIS_PrijavaVSistem.csproj",
+      "projectUniqueName": "C:\\Users\\krist\\Documents\\3.semester\\RGI\\BlazorApp1\\BralniDnevnik\\RGIS_PrijavaVSistem\\RGIS_PrijavaVSistem.csproj",
       "projectName": "RGIS_PrijavaVSistem",
-      "projectPath": "C:\\Sola\\BralniDnevnik\\RGIS_PrijavaVSistem\\RGIS_PrijavaVSistem.csproj",
-      "packagesPath": "C:\\Users\\maksf\\.nuget\\packages\\",
-      "outputPath": "C:\\Sola\\BralniDnevnik\\RGIS_PrijavaVSistem\\obj\\",
+      "projectPath": "C:\\Users\\krist\\Documents\\3.semester\\RGI\\BlazorApp1\\BralniDnevnik\\RGIS_PrijavaVSistem\\RGIS_PrijavaVSistem.csproj",
+      "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\krist\\Documents\\3.semester\\RGI\\BlazorApp1\\BralniDnevnik\\RGIS_PrijavaVSistem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\maksf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1729,7 +1729,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net7.0": {
@@ -1767,7 +1767,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
