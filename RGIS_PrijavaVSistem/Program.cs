@@ -1,7 +1,11 @@
+using RGIS_PrijavaVSistem.Domain;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
 
 // registracija naših domenkih servisov
 builder.Services.AddSingleton<InMemoryDataStore>();

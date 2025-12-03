@@ -13,15 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RGIS_PrijavaVSistem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bedf66a7f27023ba511cbd2e5bb5418fee35e5bc")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc94971faf66f38a94ab9cbd4cedafd61116b506")]
->>>>>>> Stashed changes
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc94971faf66f38a94ab9cbd4cedafd61116b506")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a319677e9c5163a24cfb3c0854a9830e89f10bd8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RGIS_PrijavaVSistem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RGIS_PrijavaVSistem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
