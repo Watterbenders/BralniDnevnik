@@ -10,39 +10,39 @@ jobs:
 
     steps:
     # 1) Checkout
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-    # 2) Install .NET 7 SDK
-    - name: Setup .NET 7
+    # 2) Install .NET 7 SDK + runtime
+    - name: Setup .NET 7 SDK + Runtime
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '7.0.x'
+        dotnet-version: |
+          7.0.x
+        runtime-version: |
+          7.0.x
 
-    # 3) Debug info
-    - name: Show dotnet info
+    # 3) Show debug info
+    - name: dotnet --info
       run: dotnet --info
 
-    # 4) Restore dependencies
-    - name: Restore dependencies
-      run: dotnet restore
+    # 4) Restore
+    - run: dotnet restore
 
     # 5) Build
-    - name: Build project
-      run: dotnet build --configuration Release --no-restore
+    - run: dotnet build --configuration Release --no-restore
 
-    # 6) Run Tests (generate TRX)
+    # 6) Test
     - name: Run tests
       run: dotnet test --configuration Release --logger "trx;LogFileName=test-results.trx" --no-build
 
-    # 7) Upload TRX test results (NEW v4 — This one works)
+    # 7) Upload test results (artifact v4)
     - name: Upload test results
       uses: actions/upload-artifact@v4
       with:
         name: test-results
         path: "**/test-results.trx"
 
-    # 8) Pretty Test Report (safe for non-forks)
+    # 8) Test Reporter (only if not fork)
     - name: Test Report
       if: github.event.pull_request.head.repo.fork == false
       uses: dorny/test-reporter@v1
@@ -52,5 +52,5 @@ jobs:
         reporter: dotnet-trx
 
     # 9) Docker build
-    - name: Build Docker image
+    - name: Docker build
       run: docker build -t bralni-dnevnik-app .
