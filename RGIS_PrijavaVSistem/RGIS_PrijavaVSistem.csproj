@@ -4,17 +4,15 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
-      <IsTestProject>true</IsTestProject>
+
+    <!-- zelo pomembno: označimo, da je to testni projekt -->
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MSTest.TestFramework" Version="4.0.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="3.2.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="3.2.0" />
-  </ItemGroup>
+<ItemGroup>
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+  <PackageReference Include="MSTest.TestAdapter" Version="3.2.2" />
+  <PackageReference Include="MSTest.TestFramework" Version="3.2.2" />
+</ItemGroup>
+
 </Project>
-
-
