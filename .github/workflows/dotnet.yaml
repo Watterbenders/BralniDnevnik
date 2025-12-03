@@ -1,0 +1,45 @@
+name: .NET Build and Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout source code
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Install .NET 7 explicitly (runner nima net7)
+    - name: Setup .NET 7
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '7.0.x'
+
+    # Verify installed SDKs (debugging if needed)
+    - name: Display dotnet info
+      run: dotnet --info
+
+    # Restore all projects
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Build project
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    # Run unit tests + create TRX output
+    - name: Run tests
+      run: dotnet test --configuration Release --logger "trx;LogFileName=test-results.trx" --no-build
+
+    # OPTIONAL: Create pretty test report in GitHub UI
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: always()
+      with:
+        name: MSTest Report
+        path: "**/test-results.trx"
+        reporter: mstest
