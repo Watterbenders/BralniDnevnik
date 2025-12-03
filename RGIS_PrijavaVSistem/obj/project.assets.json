@@ -1,11 +1,258 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "MSTest.Analyzers/4.0.2": {
+        "type": "package",
+        "build": {
+          "buildTransitive/MSTest.Analyzers.props": {},
+          "buildTransitive/MSTest.Analyzers.targets": {}
+        }
+      },
+      "MSTest.TestFramework/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "MSTest.Analyzers": "4.0.2"
+        },
+        "compile": {
+          "lib/net8.0/MSTest.TestFramework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MSTest.TestFramework.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net8.0/cs/MSTest.TestFramework.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/de/MSTest.TestFramework.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/es/MSTest.TestFramework.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/fr/MSTest.TestFramework.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/it/MSTest.TestFramework.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/ja/MSTest.TestFramework.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/ko/MSTest.TestFramework.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/pl/MSTest.TestFramework.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pt-BR/MSTest.TestFramework.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net8.0/ru/MSTest.TestFramework.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/tr/MSTest.TestFramework.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/zh-Hans/MSTest.TestFramework.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hant/MSTest.TestFramework.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/MSTest.TestFramework.targets": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MSTest.Analyzers/4.0.2": {
+      "sha512": "83PHm/97WR6XuciUicakLXSPDFubMsphUHxQHgkUfHcF8rOjpnlKSjRazhuvcGeqy2co8ZudUNbTM+u5e5Ujow==",
+      "type": "package",
+      "path": "mstest.analyzers/4.0.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "analyzers/dotnet/cs/MSTest.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/MSTest.Analyzers.dll",
+        "analyzers/dotnet/cs/cs/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/cs/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/de/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/de/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/es/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/es/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/fr/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/fr/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/it/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/it/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ja/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/ja/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ko/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/ko/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pl/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/pl/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ru/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/ru/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/tr/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/tr/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/zh-Hans/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/zh-Hans/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/zh-Hant/MSTest.Analyzers.CodeFixes.resources.dll",
+        "analyzers/dotnet/cs/zh-Hant/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/MSTest.Analyzers.dll",
+        "analyzers/dotnet/vb/cs/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/de/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/es/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/fr/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/it/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ja/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ko/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/pl/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/pt-BR/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ru/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/tr/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/zh-Hans/MSTest.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/zh-Hant/MSTest.Analyzers.resources.dll",
+        "buildTransitive/MSTest.Analyzers.props",
+        "buildTransitive/MSTest.Analyzers.targets",
+        "globalconfigs/mstest-all.globalconfig",
+        "globalconfigs/mstest-default.globalconfig",
+        "globalconfigs/mstest-none.globalconfig",
+        "globalconfigs/mstest-recommended.globalconfig",
+        "mstest.analyzers.4.0.2.nupkg.sha512",
+        "mstest.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "MSTest.TestFramework/4.0.2": {
+      "sha512": "ANLNvVh13tfi4ou0Xu0bZ5J83brlLufxMVVp1feUm99cWtfEn8i8PH4kskD0HSp1bFl8goZiHoCwd+fu/0L2hA==",
+      "type": "package",
+      "path": "mstest.testframework/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "build/net462/MSTest.TestFramework.targets",
+        "build/net8.0/MSTest.TestFramework.targets",
+        "build/net9.0/MSTest.TestFramework.targets",
+        "build/netstandard2.0/MSTest.TestFramework.targets",
+        "build/uap10.0/MSTest.TestFramework.targets",
+        "buildTransitive/net462/MSTest.TestFramework.targets",
+        "buildTransitive/net8.0/MSTest.TestFramework.Extensions.dll",
+        "buildTransitive/net8.0/MSTest.TestFramework.Extensions.xml",
+        "buildTransitive/net8.0/MSTest.TestFramework.targets",
+        "buildTransitive/net8.0/winui/MSTest.TestFramework.Extensions.dll",
+        "buildTransitive/net8.0/winui/MSTest.TestFramework.Extensions.xml",
+        "buildTransitive/net9.0/MSTest.TestFramework.Extensions.dll",
+        "buildTransitive/net9.0/MSTest.TestFramework.Extensions.xml",
+        "buildTransitive/net9.0/MSTest.TestFramework.targets",
+        "buildTransitive/net9.0/uwp/MSTest.TestFramework.Extensions.dll",
+        "buildTransitive/net9.0/uwp/MSTest.TestFramework.Extensions.xml",
+        "buildTransitive/netstandard2.0/MSTest.TestFramework.targets",
+        "buildTransitive/uap10.0/MSTest.TestFramework.targets",
+        "lib/net462/MSTest.TestFramework.Extensions.dll",
+        "lib/net462/MSTest.TestFramework.Extensions.xml",
+        "lib/net462/MSTest.TestFramework.dll",
+        "lib/net462/MSTest.TestFramework.xml",
+        "lib/net462/cs/MSTest.TestFramework.resources.dll",
+        "lib/net462/de/MSTest.TestFramework.resources.dll",
+        "lib/net462/es/MSTest.TestFramework.resources.dll",
+        "lib/net462/fr/MSTest.TestFramework.resources.dll",
+        "lib/net462/it/MSTest.TestFramework.resources.dll",
+        "lib/net462/ja/MSTest.TestFramework.resources.dll",
+        "lib/net462/ko/MSTest.TestFramework.resources.dll",
+        "lib/net462/pl/MSTest.TestFramework.resources.dll",
+        "lib/net462/pt-BR/MSTest.TestFramework.resources.dll",
+        "lib/net462/ru/MSTest.TestFramework.resources.dll",
+        "lib/net462/tr/MSTest.TestFramework.resources.dll",
+        "lib/net462/zh-Hans/MSTest.TestFramework.resources.dll",
+        "lib/net462/zh-Hant/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/MSTest.TestFramework.dll",
+        "lib/net8.0/MSTest.TestFramework.xml",
+        "lib/net8.0/cs/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/de/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/es/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/fr/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/it/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/ja/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/ko/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/pl/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/pt-BR/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/ru/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/tr/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/zh-Hans/MSTest.TestFramework.resources.dll",
+        "lib/net8.0/zh-Hant/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/MSTest.TestFramework.dll",
+        "lib/net9.0/MSTest.TestFramework.xml",
+        "lib/net9.0/cs/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/de/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/es/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/fr/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/it/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/ja/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/ko/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/pl/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/pt-BR/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/ru/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/tr/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/zh-Hans/MSTest.TestFramework.resources.dll",
+        "lib/net9.0/zh-Hant/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/MSTest.TestFramework.Extensions.dll",
+        "lib/netstandard2.0/MSTest.TestFramework.Extensions.xml",
+        "lib/netstandard2.0/MSTest.TestFramework.dll",
+        "lib/netstandard2.0/MSTest.TestFramework.xml",
+        "lib/netstandard2.0/cs/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/de/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/es/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/fr/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/it/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/ja/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/ko/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/pl/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/pt-BR/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/ru/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/tr/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/zh-Hans/MSTest.TestFramework.resources.dll",
+        "lib/netstandard2.0/zh-Hant/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/MSTest.TestFramework.Extensions.dll",
+        "lib/uap10.0/MSTest.TestFramework.Extensions.xml",
+        "lib/uap10.0/MSTest.TestFramework.dll",
+        "lib/uap10.0/MSTest.TestFramework.xml",
+        "lib/uap10.0/cs/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/de/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/es/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/fr/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/it/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/ja/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/ko/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/pl/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/pt-BR/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/ru/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/tr/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/zh-Hans/MSTest.TestFramework.resources.dll",
+        "lib/uap10.0/zh-Hant/MSTest.TestFramework.resources.dll",
+        "mstest.testframework.4.0.2.nupkg.sha512",
+        "mstest.testframework.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "MSTest.TestFramework >= 4.0.2"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\krist\\.nuget\\packages\\": {},
@@ -56,6 +303,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "MSTest.TestFramework": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

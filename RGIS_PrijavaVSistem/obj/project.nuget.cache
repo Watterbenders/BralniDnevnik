@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SEpT1/hZIsg=",
+  "dgSpecHash": "0q7qXZzXIHA=",
   "success": true,
   "projectFilePath": "C:\\Users\\krist\\Documents\\3.semester\\RGI\\BlazorApp1\\BralniDnevnik\\RGIS_PrijavaVSistem\\RGIS_PrijavaVSistem.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\krist\\.nuget\\packages\\mstest.analyzers\\4.0.2\\mstest.analyzers.4.0.2.nupkg.sha512",
+    "C:\\Users\\krist\\.nuget\\packages\\mstest.testframework\\4.0.2\\mstest.testframework.4.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
