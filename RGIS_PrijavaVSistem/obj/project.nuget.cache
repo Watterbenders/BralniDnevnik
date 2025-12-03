@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0q7qXZzXIHA=",
+  "dgSpecHash": "qyBszbXKgEo=",
   "success": true,
   "projectFilePath": "C:\\Users\\krist\\Documents\\3.semester\\RGI\\BlazorApp1\\BralniDnevnik\\RGIS_PrijavaVSistem\\RGIS_PrijavaVSistem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krist\\.nuget\\packages\\mstest.analyzers\\4.0.2\\mstest.analyzers.4.0.2.nupkg.sha512",
-    "C:\\Users\\krist\\.nuget\\packages\\mstest.testframework\\4.0.2\\mstest.testframework.4.0.2.nupkg.sha512"
+    "C:\\Users\\krist\\.nuget\\packages\\mstest.testframework\\4.0.2\\mstest.testframework.4.0.2.nupkg.sha512",
+    "C:\\Users\\krist\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }
