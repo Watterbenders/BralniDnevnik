@@ -42,4 +42,4 @@ jobs:
       with:
         name: MSTest Report
         path: "**/test-results.trx"
-        reporter: mstest
+        reporter: dotnet-trx

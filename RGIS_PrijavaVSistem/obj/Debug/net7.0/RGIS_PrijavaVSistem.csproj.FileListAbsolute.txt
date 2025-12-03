@@ -187,3 +187,4 @@ C:\Sola\BralniDnevnik\RGIS_PrijavaVSistem\obj\Debug\net7.0\refint\RGIS_PrijavaVS
 C:\Sola\BralniDnevnik\RGIS_PrijavaVSistem\obj\Debug\net7.0\RGIS_PrijavaVSistem.pdb
 C:\Sola\BralniDnevnik\RGIS_PrijavaVSistem\obj\Debug\net7.0\RGIS_PrijavaVSistem.genruntimeconfig.cache
 C:\Sola\BralniDnevnik\RGIS_PrijavaVSistem\obj\Debug\net7.0\ref\RGIS_PrijavaVSistem.dll
+C:\Sola\BralniDnevnik\RGIS_PrijavaVSistem\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
