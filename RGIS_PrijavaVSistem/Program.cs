@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 // registracija naših domenkih servisov
 builder.Services.AddSingleton<InMemoryDataStore>();
 builder.Services.AddScoped<IBookService, BookService>();
-builder.Services.AddScoped<IAuthService, AuthService>();ServiceCollectionServiceExtensions
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IReadingGoalService, ReadingGoalService>();
 builder.Services.AddScoped<IReadingProgressService, ReadingProgressService>();
 builder.Services.AddScoped<IStatsService, StatsService>();
