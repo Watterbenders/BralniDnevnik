@@ -1,25 +1,59 @@
-name: Net7 Tests
+name: Build, Test and Docker (.NET 7)
 
 on:
   push:
   pull_request:
 
 jobs:
-  tests:
+  build-test-docker:
     runs-on: ubuntu-latest
 
     steps:
+    # 1) Checkout
     - name: Checkout
       uses: actions/checkout@v4
 
-    # NAJPOMEMBNEJŠI DEL – tukaj se MORA instalirati .NET 7
+    # 2) Namesti .NET 7 SDK (isto kot v net7-tests.yml, ki ti dela)
     - name: Setup .NET 7 SDK
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '7.0.x'
 
+    # 3) Info (ni nujno, je pa fajn za debug)
     - name: dotnet --info
       run: dotnet --info
 
+    # 4) Restore (lahko nad solution ali na csproj – tukaj na csproj)
+    - name: Restore
+      run: dotnet restore RGIS_PrijavaVSistem/RGIS_PrijavaVSistem.csproj
+
+    # 5) Build
+    - name: Build
+      run: dotnet build RGIS_PrijavaVSistem/RGIS_PrijavaVSistem.csproj --configuration Release --no-restore
+
+    # 6) Test + TRX
     - name: Run tests
-      run: dotnet test RGIS_PrijavaVSistem/RGIS_PrijavaVSistem.csproj --configuration Release --logger "trx;LogFileName=test-results.trx"
+      run: dotnet test RGIS_PrijavaVSistem/RGIS_PrijavaVSistem.csproj --configuration Release --logger "trx;LogFileName=test-results.trx" --no-build
+
+    # 7) Upload TRX kot artefakt (uporabi v4!)
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: "**/test-results.trx"
+
+    # 8) Lep test report (samo če NI PR iz forka – drugače GitHub ne pusti)
+    - name: Test Report
+      if: github.event.pull_request.head.repo.fork == false
+      uses: dorny/test-reporter@v1
+      with:
+        name: MSTest Report
+        path: "**/test-results.trx"
+        reporter: dotnet-trx
+
+    # 9) Docker build
+    # Če imaš Dockerfile v rootu, pusti tako.
+    # Če je Dockerfile v mapi RGIS_PrijavaVSistem, spremeni v:
+    #   run: docker build -t bralni-dnevnik-app ./RGIS_PrijavaVSistem
+    - name: Build Docker image
+      run: docker build -t bralni-dnevnik-app .
