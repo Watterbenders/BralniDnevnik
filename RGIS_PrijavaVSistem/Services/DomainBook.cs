@@ -1,6 +1,6 @@
 using System;
 
-public class Book
+public class DomainBook
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Title { get; set; } = string.Empty;

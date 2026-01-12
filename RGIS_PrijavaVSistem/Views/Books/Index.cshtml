@@ -1,0 +1,17 @@
+﻿@model List<RGIS_PrijavaVSistem.Models.Book>
+
+<h2>Seznam knjig</h2>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Išči po naslovu ali avtorju" />
+    <button type="submit">Išči</button>
+</form>
+
+<a href="/Books/Create">Dodaj novo knjigo</a>
+
+<ul>
+    @foreach (var book in Model)
+    {
+        <li>@book.Title – @book.Author (@book.Genre)</li>
+    }
+</ul>

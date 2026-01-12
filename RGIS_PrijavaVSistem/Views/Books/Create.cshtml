@@ -1,0 +1,21 @@
+﻿@model RGIS_PrijavaVSistem.Models.Book
+
+<h2>Dodaj knjigo</h2>
+
+<form method="post">
+    <label>Naslov</label><br />
+    <input asp-for="Title" /><br />
+
+    <label>Avtor</label><br />
+    <input asp-for="Author" /><br />
+
+    <label>Žanr</label><br />
+    <input asp-for="Genre" /><br />
+
+    <button type="submit">Shrani</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <p style="color:red">@ViewData.ModelState.Values.First().Errors.First().ErrorMessage</p>
+}

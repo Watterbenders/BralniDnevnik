@@ -31,13 +31,13 @@ namespace BookTracker.Tests {
     public class BookTests {
         [TestMethod]
         public void Test_Book_DefaultStatus_IsNaCakanju() {
-            Book b = new Book();
+            DomainBook b = new DomainBook();
             Assert.AreEqual(BookStatus.NaCakanju, b.Status);
         }
 
         [TestMethod]
         public void Test_Book_CanSetAndGetRating() {
-            Book b = new Book();
+            DomainBook b = new DomainBook();
             b.Rating = 5;
 
             Assert.AreEqual(5, b.Rating);
@@ -45,7 +45,7 @@ namespace BookTracker.Tests {
 
         [TestMethod]
         public void Test_Book_FinishedAt_CanBeUpdated() {
-            Book b = new Book();
+            DomainBook b = new DomainBook();
             DateTime dt = DateTime.UtcNow;
 
             b.FinishedAt = dt;
