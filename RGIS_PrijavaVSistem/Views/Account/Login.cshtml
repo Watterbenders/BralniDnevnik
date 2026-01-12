@@ -1,0 +1,23 @@
+﻿<h2>Prijava</h2>
+
+@if (TempData["msg"] != null)
+{
+    <p style="color:green">@TempData["msg"]</p>
+}
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+
+<form method="post">
+    <label>Uporabniško ime</label><br />
+    <input name="username" /><br /><br />
+
+    <label>Geslo</label><br />
+    <input name="password" type="password" /><br /><br />
+
+    <button type="submit">Prijava</button>
+</form>
+
+<p><a href="/Account/Register">Registracija</a></p>
